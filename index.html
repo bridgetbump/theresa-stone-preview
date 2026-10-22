@@ -21,21 +21,40 @@ input::placeholder{color:#8A8E9A}
 .silver-logo{isolation:isolate;mix-blend-mode:screen;position:relative;display:block}
 .sl-img{filter:invert(1);display:block;width:100%;height:auto}
 .sl-tint{mix-blend-mode:multiply;position:absolute;inset:0}
-.marquee{display:flex;width:max-content;animation:marquee 45s linear infinite}
+.marquee{display:flex;width:max-content}
+.credits{scrollbar-width:none;cursor:grab;user-select:none;-webkit-user-select:none}
+.credits::-webkit-scrollbar{display:none}
 .marquee-group{display:flex;align-items:center;gap:48px;padding:26px 48px 26px 0}
 @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion: reduce){.marquee{animation:none}}
 .car-mobile-nav{display:none}
+.car-mobile-nav button:hover{border-color:#C9A24E;color:#C9A24E}
 @media (max-width: 760px){
 .nav-links{flex-wrap:nowrap!important;overflow-x:auto;width:100%;gap:28px!important;padding-bottom:8px;scrollbar-width:none}
 .nav-links::-webkit-scrollbar{display:none}
 .nav-links a{flex:0 0 auto;white-space:nowrap}
 .hero-logo{width:68vw!important}
+.hero-row{justify-content:center!important}
+.hero-row h1{width:100%;display:flex;justify-content:center}
+.hero{height:100svh!important;min-height:600px}
+.hero-wrap{top:145px;bottom:0!important;pointer-events:none}
+.hero-meta{position:absolute;right:clamp(20px,4vw,48px);bottom:110px;width:auto!important}
+.reel-ph{display:none!important}
+.hero-wrap a{pointer-events:auto}
+.hero-row{height:100%;position:relative}
+.hero-row h1{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);margin:0!important}
+@media (max-height: 760px){.hero-row h1{top:calc((100% - 212px) / 2)}}
+.reel-ph{align-items:flex-start!important;padding-top:170px}
 .hero-meta{width:100%;padding-bottom:0!important}
 .credits{margin-top:28px}
 .car-zone{display:none!important}
 .car-mobile-nav{display:flex}
 }
+nav{timeline-scope:--navx}
+.nav-track{display:none}
+@media (max-width: 760px){.nav-links{padding-right:32px;-webkit-mask-image:linear-gradient(90deg,#000 80%,transparent);mask-image:linear-gradient(90deg,#000 80%,transparent);scroll-timeline:--navx inline}.nav-track{display:block;position:relative;width:100%;height:2px;margin-top:-6px;background:#2a2834;overflow:hidden}.nav-thumb{position:absolute;left:0;top:0;height:100%;width:38%;background:#C9A24E}@supports (animation-timeline: scroll()){.nav-thumb{animation:navThumb linear both;animation-timeline:--navx}}}
+@keyframes navThumb{from{left:0}to{left:62%}}
+@media (max-width: 760px){.foot-links{flex-direction:column;gap:20px!important}}
 </style>
 
 </head>
@@ -46,8 +65,8 @@ input::placeholder{color:#8A8E9A}
 <div style="font-family: Raleway, system-ui, sans-serif; color: #FDFEFF; background: #07060D; min-width: 0">
 
 <!-- HERO -->
-<header style="position: relative; height: 880px; overflow: hidden; background: radial-gradient(120% 90% at 70% 40%, #2a2733 0%, #121019 55%, #07060D 100%)">
-  <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center">
+<header class="hero" style="position: relative; height: 880px; overflow: hidden; background: radial-gradient(120% 90% at 70% 40%, #2a2733 0%, #121019 55%, #07060D 100%)">
+  <div class="reel-ph" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center">
     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; opacity: 0.55">
       <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#A6AAB6" stroke-width="1" aria-hidden="true"><circle cx="12" cy="12" r="10.5"></circle><path d="M10 8.5v7l5.5-3.5z"></path></svg>
       <span style="font-size: 12px; letter-spacing: 0.3em; font-weight: 700; color: #A6AAB6">CHOREO REEL — FULL-BLEED, MUTED LOOP</span>
@@ -63,10 +82,11 @@ input::placeholder{color:#8A8E9A}
       <a class="navlink inst" href="instincts.html">INSTINCTS</a>
       <a class="navlink" href="contact.html">CONTACT</a>
     </div>
+    <div class="nav-track" aria-hidden="true"><span class="nav-thumb"></span></div>
   </nav>
 
-  <div style="position: absolute; z-index: 2; left: 0; right: 0; bottom: 72px">
-    <div style="max-width: 1344px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px">
+  <div class="hero-wrap" style="position: absolute; z-index: 2; left: 0; right: 0; bottom: 72px">
+    <div class="hero-row" style="max-width: 1344px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px">
       <h1 style="margin: 0"><img class="hero-logo" src="assets/theresa-stone-creative-stacked.png" alt="Theresa Stone Creative" style="display: block; width: min(720px, 86vw); height: auto"></h1>
       <div class="hero-meta" style="display: flex; flex-direction: column; gap: 22px; align-items: flex-end; padding-bottom: 24px">
         <p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.3em; color: #C9A24E; text-align: right; line-height: 2">CHOREOGRAPHER<br>CREATIVE DIRECTOR</p>
@@ -79,13 +99,10 @@ input::placeholder{color:#8A8E9A}
 </header>
 
 <!-- CREDITS STRIP -->
-<div class="credits" style="border-top: 1px solid #1d1b26; border-bottom: 1px solid #1d1b26; overflow: hidden">
+<div class="credits" onPointerDown="{{creditsDown}}" onPointerMove="{{creditsMove}}" onPointerUp="{{creditsUp}}" onPointerLeave="{{creditsUp}}" style="border-top: 1px solid #1d1b26; border-bottom: 1px solid #1d1b26; overflow-x: auto; overflow-y: hidden; margin-top: clamp(28px, 4vw, 56px)">
   <div class="marquee" style="white-space: nowrap; font-size: 13px; font-weight: 600; letter-spacing: 0.24em; color: #A6AAB6">
     <div class="marquee-group" style="padding-left: 48px">
-      <span>ALICIA KEYS</span><span style="color: #C9A24E">✦</span><span>GWEN STEFANI</span><span style="color: #C9A24E">✦</span><span>NIKE</span><span style="color: #C9A24E">✦</span><span>SO YOU THINK YOU CAN DANCE</span><span style="color: #C9A24E">✦</span><span>MAYBELLINE</span><span style="color: #C9A24E">✦</span><span>HBO</span><span style="color: #C9A24E">✦</span><span>NEW YORK FASHION WEEK</span><span style="color: #C9A24E">✦</span><span>TODRICK HALL</span><span style="color: #C9A24E">✦</span><span>TORY BURCH</span><span style="color: #C9A24E">✦</span>
-    </div>
-    <div class="marquee-group" aria-hidden="true" style="padding-left: 0">
-      <span>ALICIA KEYS</span><span style="color: #C9A24E">✦</span><span>GWEN STEFANI</span><span style="color: #C9A24E">✦</span><span>NIKE</span><span style="color: #C9A24E">✦</span><span>SO YOU THINK YOU CAN DANCE</span><span style="color: #C9A24E">✦</span><span>MAYBELLINE</span><span style="color: #C9A24E">✦</span><span>HBO</span><span style="color: #C9A24E">✦</span><span>NEW YORK FASHION WEEK</span><span style="color: #C9A24E">✦</span><span>TODRICK HALL</span><span style="color: #C9A24E">✦</span><span>TORY BURCH</span><span style="color: #C9A24E">✦</span>
+      <span>ALICIA KEYS</span><span style="color: #C9A24E">✦</span><span>GWEN STEFANI</span><span style="color: #C9A24E">✦</span><span>NIKE</span><span style="color: #C9A24E">✦</span><span>SO YOU THINK YOU CAN DANCE</span><span style="color: #C9A24E">✦</span><span>MAYBELLINE</span><span style="color: #C9A24E">✦</span><span>HBO</span><span style="color: #C9A24E">✦</span><span>NEW YORK FASHION WEEK</span><span style="color: #C9A24E">✦</span><span>TODRICK HALL</span><span style="color: #C9A24E">✦</span><span>TORY BURCH</span>
     </div>
   </div>
 </div>
@@ -213,7 +230,7 @@ input::placeholder{color:#8A8E9A}
   <div style="max-width: 880px; margin: 0 auto; padding: 120px clamp(20px, 4vw, 48px); display: flex; flex-direction: column; align-items: center; gap: 26px; text-align: center">
     <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #C9A24E">STAY IN THE LOOP</span>
     <h2 style="margin: 0; font-family: Raleway, sans-serif; font-weight: 500; font-size: clamp(28px, 3.2vw, 42px); letter-spacing: 0.06em; line-height: 1.2">BE THE FIRST TO KNOW WHEN THERESA IS TEACHING OR HOSTING INSTINCTS</h2>
-    <form style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; width: 100%; max-width: 620px; margin-top: 12px">
+    <form style="display: flex; flex-wrap: wrap; justify-content: center; gap: 24px 12px; width: 100%; max-width: 620px; margin-top: 12px">
       <label for="nl-email" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Email address</label>
       <input id="nl-email" type="email" placeholder="Email address" style="flex: 1 1 280px; min-height: 52px; padding: 0 20px; background: transparent; border: 1px solid #3a3846; color: #FDFEFF; font-family: inherit; font-size: 15px">
       <button type="submit" class="btn-gold" style="flex: 0 0 auto; min-height: 52px; padding: 0 32px; background: #C9A24E; color: #07060D; border: 0; font-family: inherit; font-size: 12px; font-weight: 700; letter-spacing: 0.24em; cursor: pointer">SIGN UP</button>
@@ -226,7 +243,7 @@ input::placeholder{color:#8A8E9A}
   <div style="max-width: 1344px; margin: 0 auto; padding: 64px clamp(20px, 4vw, 48px) 48px; display: flex; flex-direction: column; gap: 48px">
     <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 32px">
       <img src="assets/theresa-stone-creative-long.png" alt="Theresa Stone Creative" style="display: block;width: 260px; height: auto">
-      <div style="display: flex; flex-wrap: wrap; gap: 32px; font-size: 12px; font-weight: 700; letter-spacing: 0.2em">
+      <div class="foot-links" style="display: flex; flex-wrap: wrap; gap: 32px; font-size: 12px; font-weight: 700; letter-spacing: 0.2em">
         <a class="navlink" href="creative-work.html">CREATIVE WORK</a><a class="navlink" href="classes.html">CLASSES</a><a class="navlink inst" href="instincts.html">INSTINCTS</a><a class="navlink" href="contact.html">CONTACT</a>
       </div>
       <div style="display: flex; gap: 8px">
@@ -241,7 +258,7 @@ input::placeholder{color:#8A8E9A}
 </footer>
 </div>
 </template>
-<script type="text/x-dc" id="dc-script" data-props='{"$preview":{"width":1440,"height":4720}}'>
+<script type="text/x-dc" id="dc-script" data-props='{"$preview":{"width":1440,"height":4770}}'>
 class Component extends DCLogic {
   constructor(props) { super(props); this.state = { filter: 'all', idx: null, playing: false }; }
   componentWillUnmount() { this.stopSpin(); }
@@ -306,6 +323,9 @@ class Component extends DCLogic {
       hoverPrev: () => { if (this.canHover()) this.startSpin(-1, n); },
       hoverNext: () => { if (this.canHover()) this.startSpin(1, n); },
       stopSpin: () => this.stopSpin(),
+      creditsDown: (e) => { if (e.pointerType !== 'mouse') return; this._cd = { x: e.clientX, s: e.currentTarget.scrollLeft }; },
+      creditsMove: (e) => { if (!this._cd) return; e.currentTarget.scrollLeft = this._cd.s - (e.clientX - this._cd.x); },
+      creditsUp: () => { this._cd = null; },
       stepPrev: () => { this.stopSpin(); this.step(-1, n); },
       stepNext: () => { this.stopSpin(); this.step(1, n); },
       prev: () => { if (!this.canHover()) this.step(-1, n); },
