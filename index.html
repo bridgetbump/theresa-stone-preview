@@ -28,7 +28,8 @@ input::placeholder{color:#8A8E9A}
 @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion: reduce){.marquee{animation:none}}
 .car-mobile-nav{display:none}
-@media (min-width: 761px){nav[aria-label="Main"]{align-items:flex-start!important}nav[aria-label="Main"] .nav-links{padding-top:22px}}
+@media (min-width: 1025px){nav[aria-label="Main"]{align-items:flex-start!important}nav[aria-label="Main"] .nav-links{padding-top:0;line-height:1;margin-top:-1px}}
+@media (max-width: 1024px){.logo-desk{display:none!important}.logo-tab{display:block!important}}
 .car-mobile-nav button:hover{border-color:#C9A24E;color:#C9A24E}
 @media (max-width: 760px){
 .nav-links{flex-wrap:nowrap!important;overflow-x:auto;width:100%;gap:28px!important;padding-bottom:8px;scrollbar-width:none}
@@ -40,7 +41,7 @@ input::placeholder{color:#8A8E9A}
 .hero{height:100svh!important;min-height:600px}
 .hero-wrap{top:145px;bottom:0!important;pointer-events:none}
 .hero-meta{position:absolute;right:clamp(20px,4vw,48px);bottom:56px;width:auto!important}
-.nav-stacked{width:150px!important}
+
 .hero-wrap a{pointer-events:auto}
 .hero-row{height:100%;position:relative}
 .hero-row h1{position:absolute;left:0;right:0;top:auto;bottom:182px;margin:0!important}
@@ -54,7 +55,7 @@ nav{timeline-scope:--navx}
 .nav-track{display:none}
 @media (max-width: 760px){.nav-links{padding-right:32px;-webkit-mask-image:linear-gradient(90deg,#000 80%,transparent);mask-image:linear-gradient(90deg,#000 80%,transparent);scroll-timeline:--navx inline}.nav-track{display:block;position:relative;width:100%;height:2px;margin-top:-6px;background:#2a2834;overflow:hidden}.nav-thumb{position:absolute;left:0;top:0;height:100%;width:38%;background:#C9A24E}@supports (animation-timeline: scroll()){.nav-thumb{animation:navThumb linear both;animation-timeline:--navx}}}
 @keyframes navThumb{from{left:0}to{left:62%}}
-@media (max-width: 760px){.foot-links{flex-direction:column;gap:20px!important}}
+@media (max-width: 760px){.foot-links{flex-direction:column;gap:20px!important}a[aria-label="Theresa Stone Creative — home"]{flex:1 1 100%}a[aria-label="Theresa Stone Creative — home"] img{width:min(351px,100%)!important}}
 </style>
 
 </head>
@@ -75,7 +76,7 @@ nav{timeline-scope:--navx}
   <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,6,13,.55) 0%, rgba(7,6,13,0) 30%, rgba(7,6,13,0) 60%, rgba(7,6,13,.9) 100%)"></div>
 
   <nav aria-label="Main" style="position: relative; z-index: 2; max-width: 1344px; margin: 0 auto; padding: 28px clamp(20px, 4vw, 48px); display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between">
-    <a href="index.html" aria-label="Theresa Stone Creative — home"><img class="nav-stacked" src="assets/theresa-stone-creative-stacked.png" alt="Theresa Stone Creative" style="display: block; width: clamp(260px, 30vw, 420px); height: auto"></a>
+    <a href="index.html" aria-label="Theresa Stone Creative — home"><img class="nav-stacked logo-desk" src="assets/theresa-stone-creative-stacked.png" alt="Theresa Stone Creative" style="display: block; width: clamp(260px, 30vw, 420px); height: auto"><img class="logo-tab" src="assets/theresa-stone-creative-long.png" alt="Theresa Stone Creative" style="display: none; width: 240px; height: auto"></a>
     <div class="nav-links" style="display: flex; flex-wrap: wrap; gap: 36px; font-size: 13px; font-weight: 700; letter-spacing: 0.18em">
       <a class="navlink" href="creative-work.html">CREATIVE WORK</a>
       <a class="navlink" href="classes.html">CLASSES</a>
