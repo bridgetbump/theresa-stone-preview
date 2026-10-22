@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Theresa Stone Creative — Home</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&amp;family=Raleway:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#07060D}
+a{color:#FDFEFF;text-decoration:none}a:hover{color:#C9A24E}
+.logo-w{filter:invert(1);mix-blend-mode:screen;display:block}
+.tile:hover .tile-media{transform:scale(1.015)}
+.tile-media{transition:transform .4s ease}
+.navlink:hover{color:#C9A24E}
+.inst:hover{color:#D5D8E0}
+.btn-gold:hover{background:#FDFEFF;color:#07060D}
+.btn-line:hover{border-color:#C9A24E;color:#C9A24E}
+input::placeholder{color:#8A8E9A}
+.silver-logo{isolation:isolate;mix-blend-mode:screen;position:relative;display:block}
+.sl-img{filter:invert(1);display:block;width:100%;height:auto}
+.sl-tint{mix-blend-mode:multiply;position:absolute;inset:0}
+.marquee{display:flex;width:max-content;animation:marquee 45s linear infinite}
+.marquee-group{display:flex;align-items:center;gap:48px;padding:26px 48px 26px 0}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion: reduce){.marquee{animation:none}}
+.car-mobile-nav{display:none}
+@media (max-width: 760px){
+.nav-links{flex-wrap:nowrap!important;overflow-x:auto;width:100%;gap:28px!important;padding-bottom:8px;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{flex:0 0 auto;white-space:nowrap}
+.hero-logo{width:68vw!important}
+.hero-meta{width:100%;padding-bottom:0!important}
+.credits{margin-top:28px}
+.car-zone{display:none!important}
+.car-mobile-nav{display:flex}
+}
+</style>
+
+</head>
+<body>
+<div id="app"></div>
+<template id="tpl">
+
+<div style="font-family: Raleway, system-ui, sans-serif; color: #FDFEFF; background: #07060D; min-width: 0">
+
+<!-- HERO -->
+<header style="position: relative; height: 880px; overflow: hidden; background: radial-gradient(120% 90% at 70% 40%, #2a2733 0%, #121019 55%, #07060D 100%)">
+  <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; opacity: 0.55">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#A6AAB6" stroke-width="1" aria-hidden="true"><circle cx="12" cy="12" r="10.5"></circle><path d="M10 8.5v7l5.5-3.5z"></path></svg>
+      <span style="font-size: 12px; letter-spacing: 0.3em; font-weight: 700; color: #A6AAB6">CHOREO REEL — FULL-BLEED, MUTED LOOP</span>
+    </div>
+  </div>
+  <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,6,13,.55) 0%, rgba(7,6,13,0) 30%, rgba(7,6,13,0) 60%, rgba(7,6,13,.9) 100%)"></div>
+
+  <nav aria-label="Main" style="position: relative; z-index: 2; max-width: 1344px; margin: 0 auto; padding: 28px clamp(20px, 4vw, 48px); display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between">
+    <a href="index.html" aria-label="Theresa Stone Creative — home"><img src="assets/theresa-stone-creative-long.png" alt="Theresa Stone Creative" style="display: block;width: 240px; height: auto"></a>
+    <div class="nav-links" style="display: flex; flex-wrap: wrap; gap: 36px; font-size: 13px; font-weight: 700; letter-spacing: 0.18em">
+      <a class="navlink" href="creative-work.html">CREATIVE WORK</a>
+      <a class="navlink" href="classes.html">CLASSES</a>
+      <a class="navlink inst" href="instincts.html">INSTINCTS</a>
+      <a class="navlink" href="contact.html">CONTACT</a>
+    </div>
+  </nav>
+
+  <div style="position: absolute; z-index: 2; left: 0; right: 0; bottom: 72px">
+    <div style="max-width: 1344px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px">
+      <h1 style="margin: 0"><img class="hero-logo" src="assets/theresa-stone-creative-stacked.png" alt="Theresa Stone Creative" style="display: block; width: min(720px, 86vw); height: auto"></h1>
+      <div class="hero-meta" style="display: flex; flex-direction: column; gap: 22px; align-items: flex-end; padding-bottom: 24px">
+        <p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.3em; color: #C9A24E; text-align: right; line-height: 2">CHOREOGRAPHER<br>CREATIVE DIRECTOR</p>
+        <a href="#work" style="display: flex; align-items: center; gap: 12px; font-size: 12px; font-weight: 700; letter-spacing: 0.3em; color: #A6AAB6">SCROLL
+          <svg width="16" height="28" viewBox="0 0 16 28" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M8 2v22M2 18l6 6 6-6"></path></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- CREDITS STRIP -->
+<div class="credits" style="border-top: 1px solid #1d1b26; border-bottom: 1px solid #1d1b26; overflow: hidden">
+  <div class="marquee" style="white-space: nowrap; font-size: 13px; font-weight: 600; letter-spacing: 0.24em; color: #A6AAB6">
+    <div class="marquee-group" style="padding-left: 48px">
+      <span>ALICIA KEYS</span><span style="color: #C9A24E">✦</span><span>GWEN STEFANI</span><span style="color: #C9A24E">✦</span><span>NIKE</span><span style="color: #C9A24E">✦</span><span>SO YOU THINK YOU CAN DANCE</span><span style="color: #C9A24E">✦</span><span>MAYBELLINE</span><span style="color: #C9A24E">✦</span><span>HBO</span><span style="color: #C9A24E">✦</span><span>NEW YORK FASHION WEEK</span><span style="color: #C9A24E">✦</span><span>TODRICK HALL</span><span style="color: #C9A24E">✦</span><span>TORY BURCH</span><span style="color: #C9A24E">✦</span>
+    </div>
+    <div class="marquee-group" aria-hidden="true" style="padding-left: 0">
+      <span>ALICIA KEYS</span><span style="color: #C9A24E">✦</span><span>GWEN STEFANI</span><span style="color: #C9A24E">✦</span><span>NIKE</span><span style="color: #C9A24E">✦</span><span>SO YOU THINK YOU CAN DANCE</span><span style="color: #C9A24E">✦</span><span>MAYBELLINE</span><span style="color: #C9A24E">✦</span><span>HBO</span><span style="color: #C9A24E">✦</span><span>NEW YORK FASHION WEEK</span><span style="color: #C9A24E">✦</span><span>TODRICK HALL</span><span style="color: #C9A24E">✦</span><span>TORY BURCH</span><span style="color: #C9A24E">✦</span>
+    </div>
+  </div>
+</div>
+
+<!-- SELECTED WORK -->
+<section id="work" style="max-width: 1344px; margin: 0 auto; padding: 140px clamp(20px, 4vw, 48px) 120px">
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px; margin-bottom: 72px">
+    <div style="display: flex; flex-direction: column; gap: 14px">
+      <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #C9A24E">SELECTED WORK</span>
+      <h2 style="margin: 0; font-family: 'Bodoni Moda', 'Bodoni 72', serif; font-weight: 400; font-size: clamp(44px, 6vw, 84px); line-height: 1; letter-spacing: 0.01em">EVERY FRAME,<br>IN MOTION</h2>
+    </div>
+    <div role="group" aria-label="Filter work" style="display: flex; flex-wrap: wrap; gap: 10px">
+      <sc-for list="{{chips}}" as="chip" hint-placeholder-count="3">
+        <sc-if value="{{chip.active}}" hint-placeholder-val="{{false}}">
+          <button type="button" onClick="{{chip.pick}}" aria-pressed="true" style="font-family: inherit; font-size: 12px; font-weight: 700; letter-spacing: 0.2em; padding: 14px 22px; min-height: 44px; border-radius: 999px; border: 1px solid #C9A24E; background: #C9A24E; color: #07060D; cursor: pointer">{{chip.label}}</button>
+        </sc-if>
+        <sc-if value="{{chip.inactive}}" hint-placeholder-val="{{true}}">
+          <button type="button" onClick="{{chip.pick}}" aria-pressed="false" class="btn-line" style="font-family: inherit; font-size: 12px; font-weight: 700; letter-spacing: 0.2em; padding: 14px 22px; min-height: 44px; border-radius: 999px; border: 1px solid #3a3846; background: transparent; color: #FDFEFF; cursor: pointer">{{chip.label}}</button>
+        </sc-if>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- ROTATING VIDEO CAROUSEL -->
+  <div role="region" aria-roledescription="carousel" aria-label="Selected work videos" style="position: relative; height: calc(min(760px, 72vw) * 0.5625 + 64px); perspective: 1800px; margin: 0 calc(-1 * clamp(20px, 4vw, 48px)); overflow: hidden">
+    <sc-for list="{{reel}}" as="item" hint-placeholder-count="5">
+      <div style="position: absolute; top: 32px; left: 50%; width: min(760px, 72vw); aspect-ratio: 16 / 9; transform: {{item.transform}}; z-index: {{item.z}}; opacity: {{item.op}}; transition: transform .7s cubic-bezier(.2,.7,.2,1), opacity .7s ease; transform-style: preserve-3d">
+        <div style="position: relative; width: 100%; height: 100%; overflow: hidden; background: linear-gradient(150deg, #2a2733 0%, #121019 75%); border: 1px solid {{item.border}}; box-shadow: 0 30px 80px rgba(0,0,0,.6); display: flex; align-items: center; justify-content: center">
+          <span style="position: absolute; left: 20px; top: 18px; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; color: #07060D; background: #A6AAB6; padding: 6px 10px">{{item.tag}}</span>
+          <span style="position: absolute; right: 20px; top: 18px; font-family: 'Bodoni Moda', serif; font-size: 18px; color: #C9A24E">{{item.num}}</span>
+          <sc-if value="{{item.showPlay}}" hint-placeholder-val="{{false}}">
+            <button type="button" onClick="{{play}}" aria-label="Play {{item.title}}" style="width: 96px; height: 96px; border-radius: 50%; border: 1px solid #C9A24E; background: rgba(7,6,13,.55); color: #C9A24E; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"></path></svg></button>
+          </sc-if>
+          <sc-if value="{{item.isPlaying}}" hint-placeholder-val="{{false}}">
+            <div style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 22px; gap: 14px; background: linear-gradient(180deg, rgba(7,6,13,0) 55%, rgba(7,6,13,.85))">
+              <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.26em; color: #A6AAB6">NOW PLAYING · VIDEO WITH SOUND</span>
+              <div style="display: flex; align-items: center; gap: 16px">
+                <button type="button" onClick="{{pause}}" aria-label="Pause" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid #FDFEFF; background: transparent; color: #FDFEFF; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="5" y="4" width="5" height="16"></rect><rect x="14" y="4" width="5" height="16"></rect></svg></button>
+                <div style="flex: 1; height: 2px; background: #3a3846"><div style="width: 34%; height: 2px; background: #C9A24E"></div></div>
+                <span style="font-size: 12px; color: #A6AAB6">0:42 / 2:05</span>
+              </div>
+            </div>
+          </sc-if>
+        </div>
+      </div>
+    </sc-for>
+
+    <!-- hover zones: hovering the left/right side rotates the circle -->
+    <button type="button" class="car-zone" onMouseEnter="{{hoverPrev}}" onMouseLeave="{{stopSpin}}" onClick="{{prev}}" aria-label="Previous video" style="position: absolute; z-index: 40; left: 0; top: 0; bottom: 0; width: max(64px, calc((100% - min(760px, 72vw)) / 2 - 24px)); border: 0; cursor: w-resize; background: linear-gradient(90deg, rgba(7,6,13,.95) 0%, rgba(7,6,13,0) 100%); display: flex; align-items: center; justify-content: flex-start; padding-left: clamp(16px, 3vw, 48px); color: #FDFEFF">
+      <span style="width: 52px; height: 52px; border-radius: 50%; border: 1px solid #3a3846; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M10 3L5 8l5 5"></path></svg></span>
+    </button>
+    <button type="button" class="car-zone" onMouseEnter="{{hoverNext}}" onMouseLeave="{{stopSpin}}" onClick="{{next}}" aria-label="Next video" style="position: absolute; z-index: 40; right: 0; top: 0; bottom: 0; width: max(64px, calc((100% - min(760px, 72vw)) / 2 - 24px)); border: 0; cursor: e-resize; background: linear-gradient(270deg, rgba(7,6,13,.95) 0%, rgba(7,6,13,0) 100%); display: flex; align-items: center; justify-content: flex-end; padding-right: clamp(16px, 3vw, 48px); color: #FDFEFF">
+      <span style="width: 52px; height: 52px; border-radius: 50%; border: 1px solid #3a3846; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M6 3l5 5-5 5"></path></svg></span>
+    </button>
+  </div>
+
+  <!-- phone: arrows below the videos -->
+  <div class="car-mobile-nav" style="justify-content: center; gap: 16px; margin-top: 20px">
+    <button type="button" onClick="{{stepPrev}}" aria-label="Previous video" style="width: 52px; height: 52px; border-radius: 50%; border: 1px solid #3a3846; background: transparent; color: #FDFEFF; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M10 3L5 8l5 5"></path></svg></button>
+    <button type="button" onClick="{{stepNext}}" aria-label="Next video" style="width: 52px; height: 52px; border-radius: 50%; border: 1px solid #3a3846; background: transparent; color: #FDFEFF; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M6 3l5 5-5 5"></path></svg></button>
+  </div>
+
+  <!-- caption for the centre video -->
+  <div aria-live="polite" style="display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; margin-top: 40px">
+    <span style="font-size: 28px; font-weight: 500; letter-spacing: 0.1em">{{current.title}}</span>
+    <span style="font-size: 15px; color: #A6AAB6; letter-spacing: 0.04em">{{current.sub}}</span>
+    <div style="display: flex; gap: 8px; margin-top: 4px">
+      <sc-for list="{{dots}}" as="dot" hint-placeholder-count="8">
+        <button type="button" onClick="{{dot.pick}}" aria-label="{{dot.label}}" style="width: 28px; height: 28px; border: 0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0"><span style="width: {{dot.w}}; height: 3px; background: {{dot.color}}; transition: width .4s"></span></button>
+      </sc-for>
+    </div>
+  </div>
+
+  <div style="display: flex; justify-content: center; margin-top: 64px">
+    <a href="creative-work.html" class="btn-line" style="display: inline-flex; align-items: center; gap: 14px; min-height: 44px; padding: 18px 34px; border: 1px solid #3a3846; font-size: 12px; font-weight: 700; letter-spacing: 0.26em; color: #FDFEFF">VIEW ALL CREATIVE WORK
+      <svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4"></path></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section style="border-top: 1px solid #1d1b26">
+  <div style="max-width: 1344px; margin: 0 auto; padding: 140px clamp(20px, 4vw, 48px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr)); gap: 80px; align-items: center">
+    <div style="aspect-ratio: 4 / 5; background: linear-gradient(160deg, #24212d, #0f0d16); border: 1px solid #1d1b26; display: flex; align-items: flex-end; padding: 24px; box-sizing: border-box">
+      <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.24em; color: #A6AAB6">PORTRAIT OF THERESA</span>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 32px">
+      <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #C9A24E">ABOUT THERESA</span>
+      <h2 style="margin: 0; font-family: Raleway, sans-serif; font-weight: 500; font-size: clamp(36px, 4.4vw, 60px); line-height: 1.08; letter-spacing: 0.04em">VISION. MOVEMENT. <span style="color: #C9A24E">IMPACT.</span></h2>
+      <p style="margin: 0; font-size: 19px; line-height: 1.6; color: #E6E7EC; max-width: 560px">Theresa Stone is a choreographer and creative director with 10+ years in the industry. After dancing professionally with Lady Gaga, Jennifer Lopez and Ciara, she moved behind the camera, creating movement and full creative direction for television, recording artists, brands and live events.</p>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 32px; border-top: 1px solid #2a2834; padding-top: 32px">
+        <div style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: 11px; font-weight: 700; letter-spacing: 0.28em; color: #C9A24E">TV &amp; NETWORK</span><span style="font-size: 15px; line-height: 1.5; color: #A6AAB6">So You Think You Can Dance, FX, HBO, Bravo</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: 11px; font-weight: 700; letter-spacing: 0.28em; color: #C9A24E">ARTISTS</span><span style="font-size: 15px; line-height: 1.5; color: #A6AAB6">Alicia Keys, Gwen Stefani, Todrick Hall, Cautious Clay, A Great Big World</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: 11px; font-weight: 700; letter-spacing: 0.28em; color: #C9A24E">BRANDS</span><span style="font-size: 15px; line-height: 1.5; color: #A6AAB6">Nike, Maybelline, Tory Burch, Target, Monat</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: 11px; font-weight: 700; letter-spacing: 0.28em; color: #C9A24E">LIVE</span><span style="font-size: 15px; line-height: 1.5; color: #A6AAB6">New York Fashion Week, Six Flags Great Adventure, Jalesh Cruises</span></div>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 14px">
+        <a href="#" class="btn-line" style="min-height: 44px; display: inline-flex; align-items: center; padding: 0 22px; border: 1px solid #3a3846; font-size: 11px; font-weight: 700; letter-spacing: 0.22em">CHOREOGRAPHY RESUME ↓</a>
+        <a href="#" class="btn-line" style="min-height: 44px; display: inline-flex; align-items: center; padding: 0 22px; border: 1px solid #3a3846; font-size: 11px; font-weight: 700; letter-spacing: 0.22em">TEACHING RESUME ↓</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PATHWAYS -->
+<section style="border-top: 1px solid #1d1b26">
+  <div style="max-width: 1344px; margin: 0 auto; padding: 120px clamp(20px, 4vw, 48px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 24px">
+    <a href="creative-work.html" class="tile" style="display: flex; flex-direction: column; justify-content: space-between; gap: 80px; padding: 36px; min-height: 360px; box-sizing: border-box; background: linear-gradient(170deg, #1a1822, #0c0b12); border: 1px solid #22202c">
+      <span style="font-family: 'Bodoni Moda', serif; font-size: 22px; color: #C9A24E">01</span>
+      <div style="display: flex; flex-direction: column; gap: 14px"><span style="font-family: 'Bodoni Moda', serif; font-size: 40px; line-height: 1">CREATIVE WORK</span><span style="font-size: 15px; line-height: 1.5; color: #A6AAB6">Professional work and original creative concepts.</span></div>
+    </a>
+    <a href="classes.html" class="tile" style="display: flex; flex-direction: column; justify-content: space-between; gap: 80px; padding: 36px; min-height: 360px; box-sizing: border-box; background: linear-gradient(170deg, #1a1822, #0c0b12); border: 1px solid #22202c">
+      <span style="font-family: 'Bodoni Moda', serif; font-size: 22px; color: #C9A24E">02</span>
+      <div style="display: flex; flex-direction: column; gap: 14px"><span style="font-family: 'Bodoni Moda', serif; font-size: 40px; line-height: 1">CLASSES</span><span style="font-size: 15px; line-height: 1.5; color: #A6AAB6">See upcoming classes and save your spot.</span></div>
+    </a>
+    <a href="instincts.html" class="tile inst" style="display: flex; flex-direction: column; justify-content: space-between; gap: 40px; padding: 36px; min-height: 360px; box-sizing: border-box; background: radial-gradient(90% 80% at 0% 0%, rgba(166,63,112,.55), rgba(166,63,112,0) 60%), radial-gradient(90% 80% at 100% 100%, rgba(183,91,56,.5), rgba(183,91,56,0) 60%), #07060D; border: 1px solid #2c2030">
+      <span style="font-family: 'Bodoni Moda', serif; font-size: 22px; color: #FDFEFF">03</span>
+      <div style="display: flex; flex-direction: column; gap: 14px"><span style="font-family: 'Bodoni Moda', serif; font-size: 40px; line-height: 1">INSTINCTS</span><span style="font-size: 15px; line-height: 1.5; color: #E6E7EC">A retraining for your brain. Submissions for 2027 open in November.</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section style="border-top: 1px solid #1d1b26">
+  <div style="max-width: 880px; margin: 0 auto; padding: 120px clamp(20px, 4vw, 48px); display: flex; flex-direction: column; align-items: center; gap: 26px; text-align: center">
+    <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #C9A24E">STAY IN THE LOOP</span>
+    <h2 style="margin: 0; font-family: Raleway, sans-serif; font-weight: 500; font-size: clamp(28px, 3.2vw, 42px); letter-spacing: 0.06em; line-height: 1.2">BE THE FIRST TO KNOW WHEN THERESA IS TEACHING OR HOSTING INSTINCTS</h2>
+    <form style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; width: 100%; max-width: 620px; margin-top: 12px">
+      <label for="nl-email" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Email address</label>
+      <input id="nl-email" type="email" placeholder="Email address" style="flex: 1 1 280px; min-height: 52px; padding: 0 20px; background: transparent; border: 1px solid #3a3846; color: #FDFEFF; font-family: inherit; font-size: 15px">
+      <button type="submit" class="btn-gold" style="flex: 0 0 auto; min-height: 52px; padding: 0 32px; background: #C9A24E; color: #07060D; border: 0; font-family: inherit; font-size: 12px; font-weight: 700; letter-spacing: 0.24em; cursor: pointer">SIGN UP</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="border-top: 1px solid #1d1b26">
+  <div style="max-width: 1344px; margin: 0 auto; padding: 64px clamp(20px, 4vw, 48px) 48px; display: flex; flex-direction: column; gap: 48px">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 32px">
+      <img src="assets/theresa-stone-creative-long.png" alt="Theresa Stone Creative" style="display: block;width: 260px; height: auto">
+      <div style="display: flex; flex-wrap: wrap; gap: 32px; font-size: 12px; font-weight: 700; letter-spacing: 0.2em">
+        <a class="navlink" href="creative-work.html">CREATIVE WORK</a><a class="navlink" href="classes.html">CLASSES</a><a class="navlink inst" href="instincts.html">INSTINCTS</a><a class="navlink" href="contact.html">CONTACT</a>
+      </div>
+      <div style="display: flex; gap: 8px">
+        <a href="https://instagram.com/theresastone91" aria-label="Instagram" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border: 1px solid #3a3846; border-radius: 50%"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.6"></circle></svg></a>
+        <a href="https://youtube.com/@theresastone5205" aria-label="YouTube" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border: 1px solid #3a3846; border-radius: 50%"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"></rect><path d="M10 9v6l5-3z"></path></svg></a>
+      </div>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 12px; letter-spacing: 0.12em; color: #8A8E9A">
+      <span>© 2026 THERESA STONE. ALL RIGHTS RESERVED.</span><span>SITE BY <a href="https://bumpstudio.co" style="color: inherit; text-decoration: underline; text-underline-offset: 3px">BUMP STUDIO</a></span>
+    </div>
+  </div>
+</footer>
+</div>
+</template>
+<script type="text/x-dc" id="dc-script" data-props='{"$preview":{"width":1440,"height":4720}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { filter: 'all', idx: null, playing: false }; }
+  componentWillUnmount() { this.stopSpin(); }
+  step(dir, n) {
+    this.setState({ idx: ((this._idx || 0) + dir + n) % n, playing: false });
+  }
+  startSpin(dir, n) {
+    this.stopSpin();
+    this._wait = setTimeout(() => {
+      this.step(dir, n);
+      this._spin = setInterval(() => this.step(dir, n), 1600);
+    }, 450);
+  }
+  stopSpin() {
+    if (this._wait) { clearTimeout(this._wait); this._wait = null; }
+    if (this._spin) { clearInterval(this._spin); this._spin = null; }
+  }
+  canHover() { try { return window.matchMedia('(hover: hover)').matches; } catch (e) { return true; } }
+  renderVals() {
+    const work = [
+      { title: '[ARTIST / BRAND NAME]', sub: '[Project title] · [Role]', type: 'pro' },
+      { title: '[ARTIST / BRAND NAME]', sub: '[Project title] · [Role]', type: 'pro' },
+      { title: '[ARTIST / BRAND NAME]', sub: '[Project title] · [Role]', type: 'pro' },
+      { title: '[ARTIST / BRAND NAME]', sub: '[Project title] · [Role]', type: 'pro' },
+      { title: '[ARTIST / BRAND NAME]', sub: '[Project title] · [Role]', type: 'pro' },
+      { title: '[CONCEPT FILM TITLE]', sub: 'Original concept · Director & Choreographer', type: 'concept' },
+      { title: '[CONCEPT FILM TITLE]', sub: 'Original concept · Creative Director', type: 'concept' },
+      { title: '[CONCEPT FILM TITLE]', sub: 'Original concept · Director & Choreographer', type: 'concept' }
+    ];
+    const f = this.state.filter;
+    const shown = work.filter((w) => f === 'all' || w.type === f).map((w, i) => ({
+      ...w,
+      num: String(i + 1).padStart(2, '0'),
+      tag: w.type === 'pro' ? 'PROFESSIONAL' : 'CONCEPT'
+    }));
+    const chips = [['all', 'ALL'], ['pro', 'PROFESSIONAL'], ['concept', 'CREATIVE CONCEPTS']].map(([id, label]) => ({
+      label, active: f === id, inactive: f !== id, pick: () => { this.stopSpin(); this.setState({ filter: id, idx: null, playing: false }); }
+    }));
+    const n = shown.length;
+    const half = Math.floor(n / 2);
+    const idx = this.state.idx == null ? Math.min(2, half) : this.state.idx % n;
+    this._idx = idx;
+    const reel = shown.map((w, i) => {
+      const d = ((i - idx + n + half) % n) - half;
+      const a = Math.abs(d);
+      return {
+        ...w,
+        transform: 'translateX(calc(-50% + ' + d + ' * min(420px, 40vw))) translateZ(' + (-a * 260) + 'px) rotateY(' + (-d * 26) + 'deg)',
+        z: 20 - a,
+        op: a === 0 ? 1 : a === 1 ? 0.75 : a === 2 ? 0.35 : 0,
+        border: a === 0 ? '#C9A24E' : '#22202c',
+        showPlay: a === 0 && !this.state.playing,
+        isPlaying: a === 0 && this.state.playing
+      };
+    });
+    return {
+      chips,
+      reel,
+      current: shown[idx],
+      play: () => { this.stopSpin(); this.setState({ playing: true }); },
+      pause: () => this.setState({ playing: false }),
+      hoverPrev: () => { if (this.canHover()) this.startSpin(-1, n); },
+      hoverNext: () => { if (this.canHover()) this.startSpin(1, n); },
+      stopSpin: () => this.stopSpin(),
+      stepPrev: () => { this.stopSpin(); this.step(-1, n); },
+      stepNext: () => { this.stopSpin(); this.step(1, n); },
+      prev: () => { if (!this.canHover()) this.step(-1, n); },
+      next: () => { if (!this.canHover()) this.step(1, n); },
+      dots: shown.map((w, i) => ({
+        label: 'Show video ' + (i + 1),
+        w: i === idx ? '24px' : '10px',
+        color: i === idx ? '#C9A24E' : '#3a3846',
+        pick: () => this.setState({ idx: i, playing: false })
+      }))
+    };
+  }
+}
+</script>
+<script src="dc-lite.js"></script>
+</body>
+</html>
