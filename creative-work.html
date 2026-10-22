@@ -27,6 +27,7 @@ nav{timeline-scope:--navx}
 .nav-track{display:none}
 @media (max-width: 760px){.nav-links{padding-right:32px;-webkit-mask-image:linear-gradient(90deg,#000 80%,transparent);mask-image:linear-gradient(90deg,#000 80%,transparent);scroll-timeline:--navx inline}.nav-track{display:block;position:relative;width:100%;height:2px;margin-top:-6px;background:#2a2834;overflow:hidden}.nav-thumb{position:absolute;left:0;top:0;height:100%;width:38%;background:#C9A24E}@supports (animation-timeline: scroll()){.nav-thumb{animation:navThumb linear both;animation-timeline:--navx}}}
 @keyframes navThumb{from{left:0}to{left:62%}}
+@media (min-width: 1025px){nav[aria-label="Main"] > div{padding-top:64px!important}}
 @media (max-width: 760px){.foot-links{flex-direction:column;gap:20px!important}a[aria-label="Theresa Stone Creative — home"]{flex:1 1 100%}a[aria-label="Theresa Stone Creative — home"] img{width:min(351px,100%)!important}}
 </style>
 
@@ -199,7 +200,7 @@ nav{timeline-scope:--navx}
 
 </div>
 </template>
-<script type="text/x-dc" id="dc-script" data-props='{"$preview":{"width":1440,"height":5090}}'>
+<script type="text/x-dc" id="dc-script" data-props='{"$preview":{"width":1440,"height":5130}}'>
 class Component extends DCLogic {
   constructor(props) { super(props); this.state = { playing: null, rot: 0, anim: 0 }; }
   goFull(e) {

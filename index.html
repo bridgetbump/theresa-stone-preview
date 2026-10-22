@@ -30,6 +30,7 @@ input::placeholder{color:#8A8E9A}
 .car-mobile-nav{display:none}
 @media (min-width: 1025px){nav[aria-label="Main"]{align-items:flex-start!important}nav[aria-label="Main"] .nav-links{padding-top:0;line-height:1;margin-top:-1px}}
 @media (max-width: 1024px){.logo-desk{display:none!important}.logo-tab{display:block!important}}
+@media (min-width: 1025px){nav[aria-label="Main"]{padding-top:64px!important}}
 .car-mobile-nav button:hover{border-color:#C9A24E;color:#C9A24E}
 @media (max-width: 760px){
 .nav-links{flex-wrap:nowrap!important;overflow-x:auto;width:100%;gap:28px!important;padding-bottom:8px;scrollbar-width:none}
@@ -258,7 +259,7 @@ nav{timeline-scope:--navx}
 </footer>
 </div>
 </template>
-<script type="text/x-dc" id="dc-script" data-props='{"$preview":{"width":1440,"height":4770}}'>
+<script type="text/x-dc" id="dc-script" data-props='{"$preview":{"width":1440,"height":4810}}'>
 class Component extends DCLogic {
   constructor(props) { super(props); this.state = { filter: 'all', idx: null, playing: false }; }
   componentWillUnmount() { this.stopSpin(); }
