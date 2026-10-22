@@ -31,7 +31,8 @@ nav{timeline-scope:--navx}
 @media (max-width: 760px){.nav-links{padding-right:32px;-webkit-mask-image:linear-gradient(90deg,#000 80%,transparent);mask-image:linear-gradient(90deg,#000 80%,transparent);scroll-timeline:--navx inline}.nav-track{display:block;position:relative;width:100%;height:2px;margin-top:-6px;background:rgba(253,254,255,.15);overflow:hidden}.nav-thumb{position:absolute;left:0;top:0;height:100%;width:38%;background:#D5D8E0}@supports (animation-timeline: scroll()){.nav-thumb{animation:navThumb linear both;animation-timeline:--navx}}}
 @keyframes navThumb{from{left:0}to{left:62%}}
 @media (min-width: 1025px){nav[aria-label="Main"]{padding-top:64px!important}}
-@media (max-width: 760px){.foot-links{flex-direction:column;gap:20px!important}a[aria-label="Theresa Stone Creative — home"]{flex:1 1 100%}a[aria-label="Theresa Stone Creative — home"] img{width:min(351px,100%)!important}}
+@media (min-width: 1025px){nav[aria-label="Main"]{align-items:flex-start!important}nav[aria-label="Main"] .nav-links{padding-top:0;line-height:1;margin-top:-1px}}
+@media (max-width: 760px){.pill{flex-direction:column;gap:6px!important;border-radius:28px!important;padding:14px 22px!important;font-size:11px!important;letter-spacing:.14em!important}.pill-sep{display:none}.foot-links{flex-direction:column;gap:20px!important}a[aria-label="Theresa Stone Creative — home"]{flex:1 1 100%}a[aria-label="Theresa Stone Creative — home"] img{width:min(351px,100%)!important}}
 </style>
 
 </head>
@@ -44,7 +45,7 @@ nav{timeline-scope:--navx}
 <!-- HERO -->
 <header style="position: relative; overflow: hidden">
   <nav aria-label="Main" style="max-width: 1344px; margin: 0 auto; padding: 28px clamp(20px, 4vw, 48px); display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between">
-    <a href="index.html" aria-label="Theresa Stone Creative — home"><img src="assets/theresa-stone-creative-long.png" alt="Theresa Stone Creative" style="filter: brightness(0) invert(1);display: block;width: 240px; height: auto"></a>
+    <a href="index.html" aria-label="Theresa Stone Creative — home"><img src="assets/theresa-stone-creative-long.png" alt="Theresa Stone Creative" style="filter: brightness(0) invert(1);display: block;width: 260px; height: auto"></a>
     <div class="nav-links" style="display: flex; flex-wrap: wrap; gap: 36px; font-size: 13px; font-weight: 700; letter-spacing: 0.18em">
       <a class="navlink" href="creative-work.html">CREATIVE WORK</a>
       <a class="navlink" href="classes.html">CLASSES</a>
@@ -53,18 +54,18 @@ nav{timeline-scope:--navx}
     </div>
     <div class="nav-track" aria-hidden="true"><span class="nav-thumb"></span></div>
   </nav>
-  <div style="max-width: 1100px; margin: 0 auto; padding: 80px clamp(20px, 4vw, 48px) 140px; display: flex; flex-direction: column; align-items: center; gap: 36px; text-align: center">
+  <div style="max-width: 1100px; margin: 0 auto; padding: 80px clamp(20px, 4vw, 48px) 64px; display: flex; flex-direction: column; align-items: center; gap: 36px; text-align: center">
     <h1 style="margin: 0"><span class="inst-logo" style="position: relative; display: block; width: min(720px, 86vw)"><img src="assets/instincts-wordmark-silver.png" alt="INSTINCTS by Theresa Stone" style="display: block; width: 100%; height: auto"><span class="inst-shine" aria-hidden="true"></span></span></h1>
     <p style="margin: 0; font-size: clamp(20px, 2.2vw, 28px); font-weight: 500; letter-spacing: 0.22em">A RETRAINING FOR YOUR BRAIN</p>
     <sc-if value="{{closed}}" hint-placeholder-val="{{true}}">
       <div style="display: flex; flex-direction: column; align-items: center; gap: 40px">
-        <span style="display: inline-flex; align-items: center; gap: 10px; padding: 12px 22px; border: 1px solid rgba(253,254,255,.35); border-radius: 999px; font-size: 12px; font-weight: 700; letter-spacing: 0.24em">INSTINCTS 2027 · SUBMISSIONS OPEN NOVEMBER 2026</span>
+        <span class="pill" style="display: inline-flex; align-items: center; gap: 10px; padding: 12px 22px; border: 1px solid rgba(253,254,255,.35); border-radius: 999px; font-size: 12px; font-weight: 700; letter-spacing: 0.24em"><span>INSTINCTS 2027</span><span class="pill-sep">·</span><span>SUBMISSIONS OPEN NOVEMBER 2026</span></span>
         <a href="#apply" class="btn-glow" style="min-height: 56px; display: inline-flex; align-items: center; padding: 0 38px; background: linear-gradient(90deg, #A63F70, #B75B38); color: #FDFEFF; font-size: 13px; font-weight: 700; letter-spacing: 0.24em">GET NOTIFIED</a>
       </div>
     </sc-if>
     <sc-if value="{{open}}" hint-placeholder-val="{{false}}">
       <div style="display: flex; flex-direction: column; align-items: center; gap: 40px">
-        <span style="display: inline-flex; align-items: center; gap: 10px; padding: 12px 22px; border: 1px solid rgba(253,254,255,.35); border-radius: 999px; font-size: 12px; font-weight: 700; letter-spacing: 0.24em">INSTINCTS 2027 · SUBMISSIONS NOW OPEN · CLOSE [DATE]</span>
+        <span class="pill" style="display: inline-flex; align-items: center; gap: 10px; padding: 12px 22px; border: 1px solid rgba(253,254,255,.35); border-radius: 999px; font-size: 12px; font-weight: 700; letter-spacing: 0.24em"><span>INSTINCTS 2027</span><span class="pill-sep">·</span><span>SUBMISSIONS NOW OPEN · CLOSE [DATE]</span></span>
         <a href="#apply" class="btn-glow" style="min-height: 56px; display: inline-flex; align-items: center; padding: 0 38px; background: linear-gradient(90deg, #A63F70, #B75B38); color: #FDFEFF; font-size: 13px; font-weight: 700; letter-spacing: 0.24em">APPLY NOW</a>
       </div>
     </sc-if>
@@ -72,7 +73,7 @@ nav{timeline-scope:--navx}
 </header>
 
 <!-- WHAT IT IS -->
-<section style="max-width: 1344px; margin: 0 auto; padding: 140px clamp(20px, 4vw, 48px) 100px; display: flex; flex-wrap: wrap; gap: 72px">
+<section style="max-width: 1344px; margin: 0 auto; padding: 72px clamp(20px, 4vw, 48px) 100px; display: flex; flex-wrap: wrap; gap: 72px">
   <div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 18px">
     <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #A6AAB6">THE PROGRAM</span>
     <h2 style="margin: 0; font-family: 'Bodoni Moda', serif; font-weight: 400; font-size: clamp(44px, 5vw, 72px); line-height: 1">TRAIN THE<br>MIND THAT<br>MOVES YOU</h2>
@@ -203,7 +204,7 @@ nav{timeline-scope:--navx}
 </footer>
 </div>
 </template>
-<script type="text/x-dc" id="dc-script" data-props='{"submissionsOpen":{"editor":"boolean","default":false,"section":"Page state"},"$preview":{"width":1440,"height":4730}}'>
+<script type="text/x-dc" id="dc-script" data-props='{"submissionsOpen":{"editor":"boolean","default":false,"section":"Page state"},"$preview":{"width":1440,"height":4600}}'>
 class Component extends DCLogic {
   renderVals() {
     const open = this.props.submissionsOpen ?? false;

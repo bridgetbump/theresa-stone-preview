@@ -77,7 +77,7 @@ nav{timeline-scope:--navx}
   <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,6,13,.55) 0%, rgba(7,6,13,0) 30%, rgba(7,6,13,0) 60%, rgba(7,6,13,.9) 100%)"></div>
 
   <nav aria-label="Main" style="position: relative; z-index: 2; max-width: 1344px; margin: 0 auto; padding: 28px clamp(20px, 4vw, 48px); display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between">
-    <a href="index.html" aria-label="Theresa Stone Creative — home"><img class="nav-stacked logo-desk" src="assets/theresa-stone-creative-stacked.png" alt="Theresa Stone Creative" style="display: block; width: clamp(260px, 30vw, 420px); height: auto"><img class="logo-tab" src="assets/theresa-stone-creative-long.png" alt="Theresa Stone Creative" style="display: none; width: 240px; height: auto"></a>
+    <a href="index.html" aria-label="Theresa Stone Creative — home"><img class="nav-stacked logo-desk" src="assets/theresa-stone-creative-stacked.png" alt="Theresa Stone Creative" style="display: block; width: clamp(260px, 30vw, 420px); height: auto"><img class="logo-tab" src="assets/theresa-stone-creative-long.png" alt="Theresa Stone Creative" style="display: none; width: 260px; height: auto"></a>
     <div class="nav-links" style="display: flex; flex-wrap: wrap; gap: 36px; font-size: 13px; font-weight: 700; letter-spacing: 0.18em">
       <a class="navlink" href="creative-work.html">CREATIVE WORK</a>
       <a class="navlink" href="classes.html">CLASSES</a>
@@ -100,14 +100,6 @@ nav{timeline-scope:--navx}
   </div>
 </header>
 
-<!-- CREDITS STRIP -->
-<div class="credits" onPointerDown="{{creditsDown}}" onPointerMove="{{creditsMove}}" onPointerUp="{{creditsUp}}" onPointerLeave="{{creditsUp}}" style="border-top: 1px solid #1d1b26; border-bottom: 1px solid #1d1b26; overflow-x: auto; overflow-y: hidden; margin-top: clamp(28px, 4vw, 56px)">
-  <div class="marquee" style="white-space: nowrap; font-size: 13px; font-weight: 600; letter-spacing: 0.24em; color: #A6AAB6">
-    <div class="marquee-group" style="padding-left: 48px">
-      <span>ALICIA KEYS</span><span style="color: #C9A24E">✦</span><span>GWEN STEFANI</span><span style="color: #C9A24E">✦</span><span>NIKE</span><span style="color: #C9A24E">✦</span><span>SO YOU THINK YOU CAN DANCE</span><span style="color: #C9A24E">✦</span><span>MAYBELLINE</span><span style="color: #C9A24E">✦</span><span>HBO</span><span style="color: #C9A24E">✦</span><span>NEW YORK FASHION WEEK</span><span style="color: #C9A24E">✦</span><span>TODRICK HALL</span><span style="color: #C9A24E">✦</span><span>TORY BURCH</span>
-    </div>
-  </div>
-</div>
 
 <!-- SELECTED WORK -->
 <section id="work" style="max-width: 1344px; margin: 0 auto; padding: 140px clamp(20px, 4vw, 48px) 120px">
@@ -259,7 +251,7 @@ nav{timeline-scope:--navx}
 </footer>
 </div>
 </template>
-<script type="text/x-dc" id="dc-script" data-props='{"$preview":{"width":1440,"height":4810}}'>
+<script type="text/x-dc" id="dc-script" data-props='{"$preview":{"width":1440,"height":4650}}'>
 class Component extends DCLogic {
   constructor(props) { super(props); this.state = { filter: 'all', idx: null, playing: false }; }
   componentWillUnmount() { this.stopSpin(); }
