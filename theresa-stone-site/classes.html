@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Theresa Stone Creative — Classes</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&amp;family=Raleway:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#07060D}
+a{color:#FDFEFF;text-decoration:none}a:hover{color:#C9A24E}
+.logo-w{filter:invert(1);mix-blend-mode:screen;display:block}
+.navlink:hover{color:#C9A24E}
+.navlink.inst:hover{color:#D5D8E0}
+.btn-gold:hover{background:#FDFEFF;color:#07060D}
+.btn-line:hover{border-color:#C9A24E;color:#C9A24E}
+.day-btn:hover{border-color:#C9A24E}
+input::placeholder,textarea::placeholder{color:#8A8E9A}
+.cv-track{scrollbar-width:thin;scrollbar-color:#C9A24E #2a2834}
+.cv-track::-webkit-scrollbar{height:4px}
+.cv-track::-webkit-scrollbar-track{background:#2a2834}
+.cv-track::-webkit-scrollbar-thumb{background:#C9A24E}
+@media (max-width: 760px){.nav-links{flex-wrap:nowrap!important;overflow-x:auto;width:100%;gap:28px!important;padding-bottom:8px;scrollbar-width:none}.nav-links::-webkit-scrollbar{display:none}.nav-links a{flex:0 0 auto;white-space:nowrap}}
+nav{timeline-scope:--navx}
+.nav-track{display:none}
+@media (max-width: 760px){.nav-links{padding-right:32px;-webkit-mask-image:linear-gradient(90deg,#000 80%,transparent);mask-image:linear-gradient(90deg,#000 80%,transparent);scroll-timeline:--navx inline}.nav-track{display:block;position:relative;width:100%;height:2px;margin-top:-6px;background:#2a2834;overflow:hidden}.nav-thumb{position:absolute;left:0;top:0;height:100%;width:38%;background:#C9A24E}@supports (animation-timeline: scroll()){.nav-thumb{animation:navThumb linear both;animation-timeline:--navx}}}
+@keyframes navThumb{from{left:0}to{left:62%}}
+@media (max-width: 760px){.foot-links{flex-direction:column;gap:20px!important}}
+</style>
+
+</head>
+<body>
+<div id="app"></div>
+<template id="tpl">
+
+<div style="font-family: Raleway, system-ui, sans-serif; color: #FDFEFF; background: #07060D">
+
+<nav aria-label="Main" style="border-bottom: 1px solid #1d1b26">
+  <div style="max-width: 1344px; margin: 0 auto; padding: 28px clamp(20px, 4vw, 48px); display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between">
+    <a href="index.html" aria-label="Theresa Stone Creative — home"><img src="assets/theresa-stone-creative-long.png" alt="Theresa Stone Creative" style="display: block;width: 240px; height: auto"></a>
+    <div class="nav-links" style="display: flex; flex-wrap: wrap; gap: 36px; font-size: 13px; font-weight: 700; letter-spacing: 0.18em">
+      <a class="navlink" href="creative-work.html">CREATIVE WORK</a>
+      <a class="navlink" href="classes.html" aria-current="page" style="color: #C9A24E; border-bottom: 1px solid #C9A24E; padding-bottom: 6px">CLASSES</a>
+      <a class="navlink inst" href="instincts.html">INSTINCTS</a>
+      <a class="navlink" href="contact.html">CONTACT</a>
+    </div>
+    <div class="nav-track" aria-hidden="true"><span class="nav-thumb"></span></div>
+  </div>
+</nav>
+
+<header style="max-width: 1344px; margin: 0 auto; padding: 88px clamp(20px, 4vw, 48px) 56px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 40px">
+  <div style="display: flex; flex-direction: column; gap: 18px">
+    <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #C9A24E">TRAIN WITH THERESA</span>
+    <h1 style="margin: 0; font-family: 'Bodoni Moda', 'Bodoni 72', serif; font-weight: 400; font-size: clamp(56px, 8vw, 120px); line-height: 0.95">CLASSES</h1>
+  </div>
+  <p style="margin: 0; max-width: 460px; font-size: 18px; line-height: 1.6; color: #A6AAB6">[Short intro to Theresa's classes: style, levels, what dancers can expect in the room.]</p>
+</header>
+
+<!-- SCHEDULE -->
+<section id="schedule" style="max-width: 1344px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px) 88px">
+  <div style="display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start">
+
+    <!-- Calendar -->
+    <div style="flex: 1 1 420px; min-width: 0; border: 1px solid #22202c; background: #0E0C15; padding: 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px">
+      <div style="display: flex; justify-content: space-between; align-items: center">
+        <button type="button" onClick="{{prevMonth}}" aria-label="Previous month" class="btn-line" style="width: 44px; height: 44px; border: 1px solid #3a3846; background: transparent; color: #FDFEFF; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M10 3L5 8l5 5"></path></svg></button>
+        <span style="font-size: 15px; font-weight: 700; letter-spacing: 0.26em">{{monthLabel}}</span>
+        <button type="button" onClick="{{nextMonth}}" aria-label="Next month" class="btn-line" style="width: 44px; height: 44px; border: 1px solid #3a3846; background: transparent; color: #FDFEFF; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M6 3l5 5-5 5"></path></svg></button>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; color: #8A8E9A; text-align: center">
+        <span>SUN</span><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px">
+        <sc-for list="{{days}}" as="d" hint-placeholder-count="35">
+          <sc-if value="{{d.blank}}" hint-placeholder-val="{{false}}"><span style="aspect-ratio: 1 / 1"></span></sc-if>
+          <sc-if value="{{d.plain}}" hint-placeholder-val="{{true}}"><span style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; font-size: 15px; color: #6E7280">{{d.n}}</span></sc-if>
+          <sc-if value="{{d.classDay}}" hint-placeholder-val="{{false}}">
+            <button type="button" class="day-btn" onClick="{{d.pick}}" aria-label="{{d.aria}}" style="aspect-ratio: 1 / 1; min-height: 44px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-family: inherit; font-size: 15px; font-weight: 600; color: #FDFEFF; background: transparent; border: 1px solid #3a3846; cursor: pointer">{{d.n}}<span style="width: 5px; height: 5px; border-radius: 50%; background: #C9A24E"></span></button>
+          </sc-if>
+          <sc-if value="{{d.selected}}" hint-placeholder-val="{{false}}">
+            <button type="button" onClick="{{d.pick}}" aria-label="{{d.aria}}" aria-pressed="true" style="aspect-ratio: 1 / 1; min-height: 44px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-family: inherit; font-size: 15px; font-weight: 700; color: #07060D; background: #C9A24E; border: 1px solid #C9A24E; cursor: pointer">{{d.n}}<span style="width: 5px; height: 5px; border-radius: 50%; background: #07060D"></span></button>
+          </sc-if>
+        </sc-for>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: #A6AAB6"><span style="width: 6px; height: 6px; border-radius: 50%; background: #C9A24E"></span>Class scheduled · tap a date to see details</div>
+    </div>
+
+    <!-- Right side: list OR empty state -->
+    <div style="flex: 1.3 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+      <sc-if value="{{hasClasses}}" hint-placeholder-val="{{true}}">
+        <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #C9A24E">UPCOMING CLASSES</span>
+        <sc-for list="{{classes}}" as="c" hint-placeholder-count="4">
+          <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between; padding: 24px 28px; border: 1px solid {{c.border}}; background: {{c.bg}}">
+            <div style="display: flex; gap: 24px; align-items: center">
+              <div style="display: flex; flex-direction: column; align-items: center; min-width: 56px"><span style="font-size: 11px; font-weight: 700; letter-spacing: 0.2em; color: #C9A24E">{{c.mon}}</span><span style="font-family: 'Bodoni Moda', serif; font-size: 40px; line-height: 1">{{c.day}}</span></div>
+              <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 17px; font-weight: 600; letter-spacing: 0.08em">[CLASS TITLE]</span><span style="font-size: 14px; color: #A6AAB6">{{c.dow}} · [Time] · [Studio, City] · [Level]</span><span style="font-size: 13px; color: #8A8E9A">[$ Price] · [Spots left]</span></div>
+            </div>
+            <a href="#signup" onClick="{{c.pick}}" class="btn-gold" style="min-height: 44px; display: inline-flex; align-items: center; padding: 0 24px; background: #C9A24E; color: #07060D; font-size: 11px; font-weight: 700; letter-spacing: 0.22em">RESERVE A SPOT</a>
+          </div>
+        </sc-for>
+      </sc-if>
+      <sc-if value="{{noClasses}}" hint-placeholder-val="{{false}}">
+        <div style="border: 1px solid #22202c; background: #0E0C15; padding: 56px 48px; display: flex; flex-direction: column; gap: 22px">
+          <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #C9A24E">NOTHING ON THE CALENDAR YET</span>
+          <h2 style="margin: 0; font-family: Raleway, sans-serif; font-weight: 500; font-size: 32px; letter-spacing: 0.05em; line-height: 1.2">THERESA HAS NO UPCOMING CLASSES AT THE MOMENT</h2>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #A6AAB6">Join the list and you'll be the first to hear when new dates go up, before they're posted anywhere else.</p>
+          <form style="display: flex; flex-direction: column; gap: 12px; margin-top: 8px">
+            <label for="ec-name" style="font-size: 11px; font-weight: 700; letter-spacing: 0.22em; color: #A6AAB6">NAME</label>
+            <input id="ec-name" type="text" placeholder="Your name" style="min-height: 52px; padding: 0 18px; background: transparent; border: 1px solid #3a3846; color: #FDFEFF; font-family: inherit; font-size: 15px">
+            <label for="ec-email" style="font-size: 11px; font-weight: 700; letter-spacing: 0.22em; color: #A6AAB6">EMAIL</label>
+            <input id="ec-email" type="email" placeholder="Email address" style="min-height: 52px; padding: 0 18px; background: transparent; border: 1px solid #3a3846; color: #FDFEFF; font-family: inherit; font-size: 15px">
+            <button type="submit" class="btn-gold" style="margin-top: 20px; min-height: 52px; background: #C9A24E; color: #07060D; border: 0; font-family: inherit; font-size: 12px; font-weight: 700; letter-spacing: 0.24em; cursor: pointer">NOTIFY ME ABOUT NEW CLASSES</button>
+          </form>
+          <a href="https://instagram.com/theresastone91" style="font-size: 13px; color: #A6AAB6">Teaching updates also go up on Instagram: <span style="color: #C9A24E">@theresastone91</span></a>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</section>
+
+<!-- SIGN UP -->
+<sc-if value="{{hasClasses}}" hint-placeholder-val="{{true}}">
+<section id="signup" style="border-top: 1px solid #1d1b26; background: #0E0C15">
+  <div style="max-width: 1344px; margin: 0 auto; padding: 88px clamp(20px, 4vw, 48px); display: flex; flex-wrap: wrap; gap: 72px">
+    <div style="flex: 1 1 360px; display: flex; flex-direction: column; gap: 22px">
+      <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #C9A24E">SIGN UP</span>
+      <h2 style="margin: 0; font-family: 'Bodoni Moda', serif; font-weight: 400; font-size: clamp(44px, 5vw, 68px); line-height: 1">RESERVE<br>YOUR SPOT</h2>
+      <div style="border-top: 1px solid #2a2834; padding-top: 22px; display: flex; flex-direction: column; gap: 8px">
+        <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.24em; color: #A6AAB6">SELECTED CLASS</span>
+        <span style="font-size: 20px; font-weight: 600; letter-spacing: 0.06em">[CLASS TITLE]</span>
+        <span style="font-size: 15px; color: #C9A24E">{{selectedLabel}}</span>
+        <span style="font-size: 14px; color: #A6AAB6">[Time] · [Studio, City]</span>
+      </div>
+      <div style="border-top: 1px solid #2a2834; padding-top: 22px; display: flex; flex-direction: column; gap: 12px">
+        <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.24em; color: #A6AAB6">ORDER SUMMARY</span>
+        <div style="display: flex; justify-content: space-between; font-size: 15px; color: #E6E7EC"><span>Class drop-in</span><span>[$ Price]</span></div>
+        <div style="display: flex; justify-content: space-between; font-size: 15px; color: #A6AAB6"><span>Processing fee</span><span>[$ Fee]</span></div>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid #2a2834; padding-top: 12px"><span style="font-size: 13px; font-weight: 700; letter-spacing: 0.2em">TOTAL</span><span style="font-family: 'Bodoni Moda', serif; font-size: 30px; color: #C9A24E">[$ Total]</span></div>
+      </div>
+      <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #8A8E9A">[Payment / cancellation policy goes here.]</p>
+    </div>
+    <form style="flex: 1.4 1 480px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 22px 20px">
+      <div style="display: flex; flex-direction: column; gap: 10px"><label for="s-first" style="font-size: 11px; font-weight: 700; letter-spacing: 0.22em; color: #A6AAB6">FIRST NAME</label><input id="s-first" type="text" style="min-height: 52px; padding: 0 18px; background: #07060D; border: 1px solid #3a3846; color: #FDFEFF; font-family: inherit; font-size: 15px"></div>
+      <div style="display: flex; flex-direction: column; gap: 10px"><label for="s-last" style="font-size: 11px; font-weight: 700; letter-spacing: 0.22em; color: #A6AAB6">LAST NAME</label><input id="s-last" type="text" style="min-height: 52px; padding: 0 18px; background: #07060D; border: 1px solid #3a3846; color: #FDFEFF; font-family: inherit; font-size: 15px"></div>
+      <div style="display: flex; flex-direction: column; gap: 10px"><label for="s-email" style="font-size: 11px; font-weight: 700; letter-spacing: 0.22em; color: #A6AAB6">EMAIL</label><input id="s-email" type="email" style="min-height: 52px; padding: 0 18px; background: #07060D; border: 1px solid #3a3846; color: #FDFEFF; font-family: inherit; font-size: 15px"></div>
+      <div style="display: flex; flex-direction: column; gap: 10px"><label for="s-ig" style="font-size: 11px; font-weight: 700; letter-spacing: 0.22em; color: #A6AAB6">INSTAGRAM HANDLE</label><input id="s-ig" type="text" placeholder="@" style="min-height: 52px; padding: 0 18px; background: #07060D; border: 1px solid #3a3846; color: #FDFEFF; font-family: inherit; font-size: 15px"></div>
+      <fieldset style="grid-column: 1 / -1; border: 1px solid #2a2834; margin: 8px 0 0; padding: 28px; display: flex; flex-direction: column; gap: 18px">
+        <legend style="padding: 0 10px; font-size: 11px; font-weight: 700; letter-spacing: 0.24em; color: #C9A24E">PAYMENT</legend>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #E6E7EC">After you continue, you'll pay on Stripe's secure checkout and come right back here once your spot is confirmed.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px">
+          <span style="padding: 8px 14px; border: 1px solid #3a3846; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; color: #A6AAB6">CARD</span>
+          <span style="padding: 8px 14px; border: 1px solid #3a3846; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; color: #A6AAB6">APPLE PAY</span>
+          <span style="padding: 8px 14px; border: 1px solid #3a3846; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; color: #A6AAB6">GOOGLE PAY</span>
+        </div>
+        <span style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: #8A8E9A"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1"></rect><path d="M5 7V5a3 3 0 0 1 6 0v2"></path></svg>Secure payment by Stripe. Card details are never stored on this site.</span>
+      </fieldset>
+      <label style="grid-column: 1 / -1; display: flex; gap: 14px; align-items: flex-start; font-size: 14px; line-height: 1.5; color: #A6AAB6; min-height: 44px"><input type="checkbox" style="width: 20px; height: 20px; margin: 2px 0 0; accent-color: #C9A24E">I agree to the class waiver and cancellation policy.</label>
+      <a href="class-confirmed.html" class="btn-gold" style="grid-column: 1 / -1; min-height: 56px; background: #C9A24E; color: #07060D; font-size: 13px; font-weight: 700; letter-spacing: 0.24em; display: flex; align-items: center; justify-content: center; gap: 12px">CONTINUE TO SECURE CHECKOUT <svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4"></path></svg></a>
+    </form>
+  </div>
+</section>
+</sc-if>
+
+<!-- CLASS VIDEOS -->
+<section style="border-top: 1px solid #1d1b26">
+  <div style="max-width: 1344px; margin: 0 auto; padding: 88px clamp(20px, 4vw, 48px); display: flex; flex-direction: column; gap: 40px">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
+      <div style="display: flex; flex-direction: column; gap: 14px">
+        <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #C9A24E">FROM THE ROOM</span>
+        <h2 style="margin: 0; font-family: Raleway, sans-serif; font-weight: 500; font-size: 36px; letter-spacing: 0.06em">CLASS VIDEOS</h2>
+      </div>
+      <div style="display: flex; align-items: center; gap: 20px">
+        <a href="https://instagram.com/theresastone91" style="font-size: 12px; font-weight: 700; letter-spacing: 0.24em; color: #C9A24E; min-height: 44px; display: flex; align-items: center">WATCH MORE ON INSTAGRAM →</a>
+      </div>
+    </div>
+    <div class="cv-track" tabindex="0" aria-label="Class videos, scroll sideways" style="display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 28px">
+      <sc-for list="{{videos}}" as="v" hint-placeholder-count="3">
+        <a href="#" style="flex: 0 0 max(280px, calc((100% - 48px) / 3)); scroll-snap-align: start; display: flex; flex-direction: column; gap: 14px; color: #FDFEFF">
+          <div style="aspect-ratio: 16 / 9; background: linear-gradient(160deg, #24212d, #0f0d16); display: flex; align-items: center; justify-content: center; position: relative">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#A6AAB6" stroke-width="1" aria-hidden="true"><circle cx="12" cy="12" r="10.5"></circle><path d="M10 8.5v7l5.5-3.5z"></path></svg>
+            <span style="position: absolute; left: 16px; bottom: 14px; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; color: #A6AAB6">CLASS VIDEO</span>
+          </div>
+          <span style="font-size: 15px; font-weight: 600; letter-spacing: 0.08em">{{v.title}}</span>
+          <span style="font-size: 13px; color: #A6AAB6; margin-top: -6px">{{v.sub}}</span>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- BRING THERESA -->
+<section style="border-top: 1px solid #1d1b26">
+  <div style="max-width: 1344px; margin: 0 auto; padding: 64px clamp(20px, 4vw, 48px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 32px">
+    <div style="display: flex; flex-direction: column; gap: 12px">
+      <h2 style="margin: 0; font-family: Raleway, sans-serif; font-weight: 500; font-size: 30px; letter-spacing: 0.06em">BRING THERESA TO YOUR STUDIO</h2>
+      <p style="margin: 0; font-size: 16px; color: #A6AAB6">Workshops, master classes and conventions.</p>
+    </div>
+    <a href="contact.html" class="btn-line" style="min-height: 52px; display: inline-flex; align-items: center; padding: 0 32px; border: 1px solid #3a3846; font-size: 12px; font-weight: 700; letter-spacing: 0.24em">BOOK A WORKSHOP</a>
+  </div>
+</section>
+
+<footer style="border-top: 1px solid #1d1b26">
+  <div style="max-width: 1344px; margin: 0 auto; padding: 64px clamp(20px, 4vw, 48px) 48px; display: flex; flex-direction: column; gap: 48px">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 32px">
+      <img src="assets/theresa-stone-creative-long.png" alt="Theresa Stone Creative" style="display: block; width: 260px; height: auto">
+      <div class="foot-links" style="display: flex; flex-wrap: wrap; gap: 32px; font-size: 12px; font-weight: 700; letter-spacing: 0.2em">
+        <a class="navlink" href="creative-work.html">CREATIVE WORK</a><a class="navlink" href="classes.html">CLASSES</a><a class="navlink inst" href="instincts.html">INSTINCTS</a><a class="navlink" href="contact.html">CONTACT</a>
+      </div>
+      <div style="display: flex; gap: 8px">
+        <a href="https://instagram.com/theresastone91" aria-label="Instagram" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border: 1px solid #3a3846; border-radius: 50%"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.6"></circle></svg></a>
+        <a href="https://youtube.com/@theresastone5205" aria-label="YouTube" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border: 1px solid #3a3846; border-radius: 50%"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"></rect><path d="M10 9v6l5-3z"></path></svg></a>
+      </div>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 12px; letter-spacing: 0.12em; color: #8A8E9A">
+      <span>© 2026 THERESA STONE. ALL RIGHTS RESERVED.</span><span>SITE BY <a href="https://bumpstudio.co" style="color: inherit; text-decoration: underline; text-underline-offset: 3px">BUMP STUDIO</a></span>
+    </div>
+  </div>
+</footer>
+</div>
+</template>
+<script type="text/x-dc" id="dc-script" data-props='{"hasClasses":{"editor":"boolean","default":true,"section":"Page state"},"$preview":{"width":1440,"height":2860}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { month: 0, sel: 'n7' }; }
+  scrollVideos(e, dir) {
+    try {
+      const t = e.currentTarget.closest('section').querySelector('.cv-track');
+      t.scrollBy({ left: dir * t.clientWidth * 0.8, behavior: 'smooth' });
+    } catch (err) {}
+  }
+  renderVals() {
+    const has = this.props.hasClasses ?? true;
+    const months = [
+      { label: 'NOVEMBER 2026', mon: 'NOV', lead: 0, len: 30, dows: ['SUN','MON','TUE','WED','THU','FRI','SAT'] },
+      { label: 'DECEMBER 2026', mon: 'DEC', lead: 2, len: 31 }
+    ];
+    const all = [
+      { id: 'n7', m: 0, day: 7, dow: 'Saturday' },
+      { id: 'n14', m: 0, day: 14, dow: 'Saturday' },
+      { id: 'n21', m: 0, day: 21, dow: 'Saturday' },
+      { id: 'd5', m: 1, day: 5, dow: 'Saturday' }
+    ];
+    const classes = has ? all : [];
+    const mi = this.state.month;
+    const M = months[mi];
+    const days = [];
+    for (let i = 0; i < M.lead; i++) days.push({ blank: true });
+    for (let n = 1; n <= M.len; n++) {
+      const c = classes.find((x) => x.m === mi && x.day === n);
+      const selected = !!c && c.id === this.state.sel;
+      days.push({
+        n, blank: false,
+        plain: !c, classDay: !!c && !selected, selected,
+        aria: c ? M.label.toLowerCase() + ' ' + n + ', class scheduled' : '',
+        pick: c ? () => this.setState({ sel: c.id }) : null
+      });
+    }
+    while (days.length % 7) days.push({ blank: true });
+    const sel = all.find((x) => x.id === this.state.sel) || all[0];
+    return {
+      hasClasses: has,
+      noClasses: !has,
+      monthLabel: M.label,
+      prevMonth: () => this.setState({ month: Math.max(0, mi - 1) }),
+      nextMonth: () => this.setState({ month: Math.min(1, mi + 1) }),
+      days,
+      classes: classes.map((c) => ({
+        ...c, mon: months[c.m].mon,
+        border: c.id === this.state.sel ? '#C9A24E' : '#22202c',
+        bg: c.id === this.state.sel ? '#14121B' : '#0B0A11',
+        pick: () => this.setState({ sel: c.id, month: c.m })
+      })),
+      selectedLabel: sel.dow + ', ' + (sel.m === 0 ? 'November' : 'December') + ' ' + sel.day,
+      scrollPrev: (e) => this.scrollVideos(e, -1),
+      scrollNext: (e) => this.scrollVideos(e, 1),
+      videos: [1, 2, 3].map(() => ({ title: '[CLASS VIDEO TITLE]', sub: '[Song] · [Studio]' }))
+    };
+  }
+}
+</script>
+<script src="dc-lite.js"></script>
+</body>
+</html>
